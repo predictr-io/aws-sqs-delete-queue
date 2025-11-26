@@ -1,0 +1,21 @@
+name: 'AWS SQS Delete Queue'
+description: 'Delete AWS SQS queues - DESTRUCTIVE ACTION'
+author: 'predictr-io'
+
+branding:
+  icon: 'trash-2'
+  color: 'red'
+
+inputs:
+  # Required parameters
+  queue-url:
+    description: 'SQS queue URL to delete'
+    required: true
+
+outputs:
+  deleted:
+    description: 'Whether the queue was successfully deleted ("true" or "false")'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
